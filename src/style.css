@@ -1,0 +1,108 @@
+html,body{
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+
+}
+
+.button{
+    margin-top: 1em;
+    padding:1em;
+    border-radius: 1em;
+    border:none;
+}
+
+.button:hover, .button:active{
+    margin-top: 1em;
+    padding:1em;
+    border-radius: 1em;
+    background: #f25a41;
+    color:white;
+    transition: all 400ms;
+}
+
+.container{
+    margin-top: 5em;
+}
+
+.showPost {
+    width:800px;
+}
+
+.showPost > h1 {
+    color:#333;
+}
+
+.contentPost{
+    padding:2em;
+    border:1px solid #eee;
+    border-radius: 0.5em;
+    -webkit-box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.2);
+}
+
+.postTitle{
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    color:#333;
+}
+
+
+.postContent{
+    margin-bottom: 1em;
+    color:#999;
+}
+
+#comments{
+    margin-top:1em;
+    margin-left:3em;
+}
+
+.cardComment{
+    background: #eee;
+    padding:2em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+}
+
+.commentError, .postError{
+    background: #ff3d00;
+    color: white;
+    padding:2em;
+    border-radius: 1em;
+    width:500px;
+}
+
+
+#spinner:not([hidden]) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#spinner::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    border: 2px solid #f3f3f3;
+    border-top: 3px solid #f25a41;
+    border-radius: 100%;
+    will-change: transform;
+    animation: spin 1s infinite linear
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
