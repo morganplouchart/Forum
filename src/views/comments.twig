@@ -1,0 +1,10 @@
+<div>
+{% for comment in comments %}
+    <div class="cardComment">
+        <h2>{{ comment.name }}</h2>
+        <h3>
+            <span>email: </span> {{ comment.email }}</h3>
+        <h4>{{ comment.body }}</h4>
+    </div>
+    {% endfor %}
+</div>
